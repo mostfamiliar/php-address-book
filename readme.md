@@ -8,7 +8,7 @@
 
 ## Description
 
-A web application that takes stores the name, phone number, and address of contacts. Also allows for deletion of contacts.
+A web application that takes stores the name, phone number, and address of contacts. Also allows for deletion of all contacts or single contact.
 
 
 ## Technologies Used
