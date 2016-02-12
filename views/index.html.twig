@@ -4,32 +4,42 @@
     <title>Address Book</title>
   </head>
   <body>
-    <h1>Address Book</h1>
+
     <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Address Book</h1>
+          <form action="/create_contact" method="post">
+            <div class="form-group">
+              <label for="name">Name: </label>
+              <input id="input_name" name="input_name" type="text">
+            </div>
+            <div class="form-group">
+              <label for="number">Number: </label>
+              <input id="input_number" name="input_number" type="number">
+            </div>
+            <div class="form-group">
+              <label for="address">Address: </label>
+              <input id="input_address" name="input_address" type="text">
+            </div>
+            <button type="submit" class="btn btn-info">SUBMIT</button>
+          </form>
 
-      <form action="/create_contact" method="post">
-        <label for="name">Name: </label>
-        <input id="input_name" name="input_name" type="text">
-        <label for="number">Number: </label>
-        <input id="input_number" name="input_number" type="number">
-        <label for="address">Address: </label>
-        <input id="input_address" name="input_address" type="text">
-        <button type="submit" id="btn btn-danger">SUBMIT</button>
-      </form>
-
-      <form action="/delete_addresses" method="post">
-        <button type="submit" id="btn">DELETE ADDRESSES</button>
-      </form>
-
-      {% if addresses is not empty %}
-      <h3>Current addresses</h3>
-      <ul>
-        {% for address in addresses %}
-        <li>{{ address.getName }}, {{ address.getNumber }}, {{ address.getAddress }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-
+          <form action="/delete_addresses" method="post">
+            <button type="submit" class="btn btn-danger">DELETE ADDRESSES</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          {% if addresses is not empty %}
+          <h3>Current addresses</h3>
+          <ul>
+            {% for address in addresses %}
+            <li>{{ address.getName }}, {{ address.getNumber }}, {{ address.getAddress }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+     </div>
     </div>
   </body>
 </html>
