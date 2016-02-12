@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>Address Book</title>
+  </head>
+  <body>
+    <h1>Address Book</h1>
+    <div class="container">
+      <h3>Current addresses</h3>
+      <form action="/new_address" method="post">
+        <label for="name">Name: </label>
+        <input id="input_name" name="input_name" type="text">
+        <label for="number">Number: </label>
+        <input id="input_number" name="input_number" type="number">
+        <label for="address">Address: </label>
+        <input id="input_address" name="input_address" type="text">
+        <button type="submit" id="btn btn-danger">SUBMIT</button>
+      </form>
+    </div>
+  </body>
+</html>
