@@ -6,8 +6,10 @@
   <body>
     <div class="container">
       <h1>Address Book</h1>
-        {% for contacts in contact %}
-          <p>Name: {{ contact.getName() }}</p>
+        {% for contact in contacts %}
+          <li>Name: {{ contact.getName() }}</li>
+          <li>Name: {{ contact.getNumber() }}</li>
+          <li>Name: {{ contact.getAddress() }}</li>
       {% endfor %}
 
 

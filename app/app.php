@@ -1,6 +1,6 @@
 <?php
     require_once __DIR__."/../vendor/autoload.php";
-    require_once __DIR__."/../src/Address.php";
+    require_once __DIR__."/../src/Contact.php";
 
     session_start();
     if (empty($_SESSION['list_of_contacts'])) {
@@ -34,15 +34,14 @@
         $contacts = $_SESSION['list_of_contacts'];
         $count = 0;
         foreach ($contacts as $contact) {
-          $count++;
-            // $index = array_search($contact->getName(), $contacts);
           if ( $item == $contact->getName()) {
             echo $count;
             unset($contacts[$count]);
           }
+                    $count++;
         }
         var_dump($contacts);
-        return $app['twig']->render('single_delete.html.twig', array('contact' => $contacts));
+        return $app['twig']->render('single_delete.html.twig', array('contacts' => $contacts));
     });
 
     return $app;
