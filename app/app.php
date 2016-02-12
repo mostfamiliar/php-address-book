@@ -19,11 +19,16 @@
         return $app['twig']->render('index.html.twig', array('addresses' => $addresses));
     });
 
-    // $app->post('/new_address', function() use ($app) {
-    //   $address = new Address($_POST['input_name'], $_POST['input_number'], $_POST['input_address']);
-    //   $address->save();
-    //   return $app['twig']->render('index.html.twig', array('newaddress' => $address));
-    // });
+    $app->post('/new_address', function() use ($app) {
+      $address = new Contact($_POST['input_name'], $_POST['input_number'], $_POST['input_address']);
+      $address->saveContact();
+      return $app['twig']->render('index.html.twig', array('addresses' => $address));
+    });
+
+    $app->post('/delete_addresses', function() use ($app){
+      Contact::deleteAll();
+      return $app['twig']->render('index.html.twig');
+    });
 
     return $app;
 ?>

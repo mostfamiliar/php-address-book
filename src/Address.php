@@ -10,32 +10,41 @@
     $this->address = $address;
   }
 
-  function getName($new_name) {
+  function setName($new_name) {
     $this->name = $new_name;
+
   }
 
-  function getNumber($new_number) {
+  function setNumber($new_number) {
     $this->number = $new_number;
+
   }
 
-  function getAddress($new_address) {
+  function setAddress($new_address) {
     $this->address = $new_address;
+
   }
 
-  function setName() {
-    return $this->name;
+  function getName() {
+      return $this->name;
   }
 
-  function setNumber() {
-    return $this->number;
+  function getNumber() {
+      return $this->number;
   }
 
-  function setAddress() {
+  function getAddress() {
     return $this->address;
   }
 
-  function saveAddress() {
+
+  function saveContact() {
     array_push($_SESSION['list_of_addresses'], $this);
   }
+
+  static function deleteAll() {
+      $_SESSION['list_of_addresses'] = array();
+  }
+
 }
  ?>

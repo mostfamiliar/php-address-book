@@ -7,7 +7,7 @@
   <body>
     <h1>Address Book</h1>
     <div class="container">
-      <h3>Current addresses</h3>
+
       <form action="/new_address" method="post">
         <label for="name">Name: </label>
         <input id="input_name" name="input_name" type="text">
@@ -17,6 +17,19 @@
         <input id="input_address" name="input_address" type="text">
         <button type="submit" id="btn btn-danger">SUBMIT</button>
       </form>
+
+      <form action="/delete_addresses" method="post">
+        <button type="submit" id="btn">DELETE ADDRESSES</button>
+      </form>
+
+        <h3>Current addresses</h3>
+      <ul>
+        <li>{{ address.getName }}</li>
+        {% for address in addresses %}
+        <li>{{ address.getNumber }}</li>
+        <li>{{ address.getAddress }}</li>
+      </ul>
+        {% endfor %}
     </div>
   </body>
 </html>
