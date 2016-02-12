@@ -48,19 +48,5 @@
   static function deleteAll() {
       $_SESSION['list_of_contacts'] = array();
   }
-
-  // static function deleteSingle($nameToDelete, $arr) {
-  //   $count = 0;
-  //   foreach ($arr as $contact) {
-  //     if ( $nameToDelete == $contact->getName()) {
-  //       echo $count;
-  //       unset($arr[$count]);
-  //     }
-  //               $count++;
-  //   }
-
-  // }
-
-
- }
+}
 ?>

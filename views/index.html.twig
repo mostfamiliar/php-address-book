@@ -44,17 +44,17 @@
         </div>
         <div class="col-md-6">
           {% if addresses is not empty %}
-          <h3>Current addresses</h3>
-          <ul>
-            {% for address in addresses %}
-            <li><p><strong>{{ address.getName }}</strong></p> <p>{{ address.getNumber }}</p> <p>{{ address.getAddress }}</p></li><br>
-            {% endfor %}
-          </ul>
-          {% else %}
-          <h3>You have no addresses!</h3>
-          {% endif %}
+              <h3>Current addresses</h3>
+              <ul>
+              {% for address in addresses %}
+              <li><p><strong>{{ address.getName }}</strong></p> <p>{{ address.getNumber }}</p> <p>{{ address.getAddress }}</p></li><br>
+              {% endfor %}
+              </ul>
+              {% else %}
+              <h3>You have no addresses!</h3>
+         {% endif %}
         </div>
-     </div>
+      </div>
     </div>
   </body>
 </html>
