@@ -39,11 +39,15 @@
 
 
   function saveContact() {
-    array_push($_SESSION['list_of_addresses'], $this);
+    array_push($_SESSION['list_of_contacts'], $this);
+  }
+
+  static function getAll() {
+    return $_SESSION['list_of_contacts'];
   }
 
   static function deleteAll() {
-      $_SESSION['list_of_addresses'] = array();
+      $_SESSION['list_of_contacts'] = array();
   }
 
 }

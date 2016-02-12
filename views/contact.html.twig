@@ -6,22 +6,8 @@
   <body>
     <h1>Address Book</h1>
     <div class="container">
-
-      <form action="/create_contact" method="post">
-        <label for="name">Name: </label>
-        <input id="input_name" name="input_name" type="text">
-        <label for="number">Number: </label>
-        <input id="input_number" name="input_number" type="number">
-        <label for="address">Address: </label>
-        <input id="input_address" name="input_address" type="text">
-        <button type="submit" id="btn btn-danger">SUBMIT</button>
-      </form>
-
-      <form action="/delete_addresses" method="post">
-        <button type="submit" id="btn">DELETE ADDRESSES</button>
-      </form>
-
       {% if addresses is not empty %}
+      <h1>You created a contact!</h1>
       <h3>Current addresses</h3>
       <ul>
         {% for address in addresses %}
@@ -29,7 +15,7 @@
         {% endfor %}
       </ul>
     {% endif %}
-
+   <a href="/">Add more contacts</a>
     </div>
   </body>
 </html>
