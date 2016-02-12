@@ -49,5 +49,8 @@
       $_SESSION['list_of_contacts'] = array();
   }
 
+  // function deleteSingleAddress($arr, $item) {
+  //
+  // }
  }
 ?>
