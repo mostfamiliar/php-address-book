@@ -49,12 +49,18 @@
       $_SESSION['list_of_contacts'] = array();
   }
 
-  // static function deleteSingle() {
-  //
+  // static function deleteSingle($nameToDelete, $arr) {
+  //   $count = 0;
+  //   foreach ($arr as $contact) {
+  //     if ( $nameToDelete == $contact->getName()) {
+  //       echo $count;
+  //       unset($arr[$count]);
+  //     }
+  //               $count++;
+  //   }
+
   // }
-  //
-  // // function deleteSingleAddress($arr, $item) {
-  // //
-  // // }
+
+
  }
 ?>

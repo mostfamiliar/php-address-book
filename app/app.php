@@ -29,19 +29,17 @@
         return $app['twig']->render('delete.html.twig');
     });
 
-    $app->post('delete_single', function() use ($app) {
-        $item = $_POST['contactName'];
+    $app->post('/delete_single', function() use ($app) {
+        $item = strtolower($_POST['contactName']);
         $contacts = $_SESSION['list_of_contacts'];
-        $count = 0;
-        foreach ($contacts as $contact) {
-          if ( $item == $contact->getName()) {
-            echo $count;
-            unset($contacts[$count]);
+        foreach ($contacts as $key=>$contact) {
+          $contactLower = strtolower($contact->getName());
+          if ( $item == $contactLower) {
+            unset($_SESSION['list_of_contacts'][$key]);
           }
-                    $count++;
         }
-        var_dump($contacts);
-        return $app['twig']->render('single_delete.html.twig', array('contacts' => $contacts));
+
+        return $app['twig']->render('index.html.twig', array('addresses' => Contact::getAll()));
     });
 
     return $app;
