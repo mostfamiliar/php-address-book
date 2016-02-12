@@ -20,7 +20,7 @@ A web application that takes stores the name, phone number, and address of conta
 * ATOM
 * BOOTSTRAP
 
-###Address book can be viewed at https://github.com/mostfamiliar/php-address-book or a slightly more complex version at: https://github.com/mostfamiliar/php-address-book/tree/advanced
+###Address book can be viewed at https://github.com/mostfamiliar/php-address-book 
 
 
 ### License
